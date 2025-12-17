@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>NEVA — Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="index" class="light">
+
+<nav>
+    <div>
+        <a href="index.html">Accueil</a>
+        <a href="univers.html">Univers</a>
+        <a href="personnages.html">Personnages</a>
+        <a href="gameplay.html">Gameplay</a>
+    </div>
+    <span class="theme-switch" onclick="toggleTheme()">🌗 Changer thème</span>
+</nav>
+
+<section>
+    <h2>Bienvenue dans NEVA</h2>
+    <img src="images/index-hero.jpg" alt="Paysage NEVA">
+    <p>
+        NEVA est un jeu poétique où tu explores un monde merveilleux aux couleurs vives et pastels, accompagné d’un loup fidèle.
+    </p>
+</section>
+
+<footer>
+    Site fan — NEVA © Nomada Studio
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle('light');
+    document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>

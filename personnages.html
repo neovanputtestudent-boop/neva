@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>NEVA — Personnages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="personnages1" class="light">
+
+<nav>
+    <div>
+        <a href="index.html">Accueil</a>
+        <a href="univers.html">Univers</a>
+        <a href="personnages.html">Personnages</a>
+        <a href="gameplay.html">Gameplay</a>
+    </div>
+    <span class="theme-switch" onclick="toggleTheme()">🌗 Changer thème</span>
+</nav>
+
+<section>
+    <h2>Personnages principaux</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="images/personnages1.jpg" alt="Personnage NEVA noir et rouge">
+        </div>
+        <div class="card">
+            <img src="images/personnages2.jpg" alt="Personnage NEVA bleu foncé / mauve">
+        </div>
+    </div>
+</section>
+
+<footer>
+    Site fan — NEVA © Nomada Studio
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle('light');
+    document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
