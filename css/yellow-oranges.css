@@ -1,0 +1,45 @@
+/* -----------------------------
+   Hero avec fond univers1.jpg pour yellow
+--------------------------------*/
+body#yellow header.hero {
+    background: url("../images/univers1.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #3b2a00;
+}
+
+
+body#yellow header.hero::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(255, 255, 200, 0.4); /* overlay léger pour lisibilité */
+    z-index: 0;
+}
+
+body#yellow header.hero h1,
+body#yellow header.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section intro pour yellow */
+body#yellow section.intro {
+    padding: 60px 12%;
+    color: #3b2a00;
+}
+
+/* Cards placeholder */
+body#yellow .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}

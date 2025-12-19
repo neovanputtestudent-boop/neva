@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>NEVA — Gameplay</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body id="gameplay1" class="light">
 
@@ -17,31 +18,52 @@
     <span class="theme-switch" onclick="toggleTheme()">🌗 Changer thème</span>
 </nav>
 
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Gameplay</h1>
+        <p>
+            Plongez dans l’aventure, explorez, combattez,<br>
+            et découvrez la poésie du monde de NEVA.
+        </p>
+    </div>
+</header>
+
+<main>
 <section>
-    <h2>Gameplay</h2>
-    <p>
-        NEVA combine exploration, plateformes et combats dans un monde pictural magnifique.
-    </p>
+    <h2>Moments clés du gameplay</h2>
 
     <div class="cards">
         <div class="card">
             <img src="images/gameplay1.jpg" alt="Gameplay NEVA jaune">
+            <div class="caption">Exploration et puzzles poétiques</div>
         </div>
         <div class="card">
             <img src="images/gameplay2.jpg" alt="Gameplay NEVA bleu foncé">
+            <div class="caption">Combats stratégiques et dynamiques</div>
         </div>
     </div>
 </section>
+</main>
 
 <footer>
     Site fan — NEVA © Nomada Studio
 </footer>
 
 <script>
+const theme = localStorage.getItem("theme");
+if (theme) document.body.className = theme;
+
 function toggleTheme() {
-    document.body.classList.toggle('light');
-    document.body.classList.toggle('dark');
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+    localStorage.setItem("theme", document.body.className);
 }
+
+// Active link dans la nav
+document.querySelectorAll("nav a").forEach(link => {
+    if(link.href === location.href) link.classList.add("active");
+});
 </script>
 
 </body>
